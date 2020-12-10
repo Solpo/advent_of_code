@@ -32,3 +32,4 @@ for i in range(89, 889):
         print(f"Oman paikan id: {i}")
         print(f"Paikka on rivi {i // 8} ja istuin {i % 8}")
 
+#testestst
