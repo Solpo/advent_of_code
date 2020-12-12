@@ -1,4 +1,4 @@
-import re, time
+import re
 saannot = {}
 
 with open("saannot.txt") as f:
@@ -24,5 +24,14 @@ def sisalla(orig_vari: str) -> int:
             kasseja += saanto[1] * (1 + sisalla(saanto[0]))
         return kasseja
 
-total = sisalla("shiny gold")
-print(total)
+# vastaus:
+print(sisalla("shiny gold"))
+
+
+# suurin = ("väri", 0)
+# for vari in saannot:
+#     print(f"Väri: {vari}, laukkuja sisällä: {sisalla(vari)}")
+#     if sisalla(vari) > suurin[1]:
+#         suurin = (vari, sisalla(vari))
+# print(suurin)
+
