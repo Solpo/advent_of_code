@@ -21,7 +21,7 @@ print(lahtoajat_vuorovalit)
 # [(50, 373), (19, 367), (9, 41), (13, 37), (48, 29), (73, 23), (0, 19), (36, 17), (32, 13)]
 
 # ajan_nollapiste = lahtoajat_vuorovalit[0][1] - lahtoajat_vuorovalit[0][0]
-ajan_nollapiste = 115953
+ajan_nollapiste = 1186002686
 
 def matsaako_bussit_minuutilla(bussi: int, lahtominuutti: int) -> bool:
     viive, vuorovali = lahtoajat_vuorovalit[bussi]
@@ -29,13 +29,13 @@ def matsaako_bussit_minuutilla(bussi: int, lahtominuutti: int) -> bool:
         if bussi >= len(lahtoajat_vuorovalit) - 1:
             return True
         else:
-            if bussi >= 2:
+            if bussi >= 5:
                 print(f"Sopiva nollapiste: {ajan_nollapiste}")
             return matsaako_bussit_minuutilla(bussi + 1, lahtominuutti)
     else:
         return False
 while not matsaako_bussit_minuutilla(0, ajan_nollapiste):
-    ajan_nollapiste += 136891
+    ajan_nollapiste += 6022245763
 
 print("oikea vastaus")
 print(ajan_nollapiste)
