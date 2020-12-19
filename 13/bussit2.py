@@ -13,6 +13,9 @@ for i in range(len(bussit)):
     if bussit[i] != "x":
         lahtoajat_vuorovalit.append((i, int(bussit[i])))
         # print(f"indeksi: {i}, bussi {bussit[i]}")
+print(lahtoajat_vuorovalit)
+
+lahtoajat_vuorovalit = [(0, 19), (9, 41), (13, 37), (19, 367), (32, 13), (36, 17), (48, 29), (50, 373), (73, 23), (80, 55)]
 
 def matsaako(bussi: int, lahtominuutti: int) -> bool:
     viive, vuorovali = lahtoajat_vuorovalit[bussi]
