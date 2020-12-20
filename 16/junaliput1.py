@@ -6,7 +6,7 @@ with open("lyhyt.txt") as f:
 saannot = data.split("\n\n")[0]
 valit = {}
 for rivi in saannot.split("\n"):
-    avain = re.search("^[a-z]+", rivi).group()
+    avain = re.search("^[a-z ]+:", rivi).group().replace(":", "")
     avaimen_valit = []
     
     range_loyto = re.findall("[0-9]+-[0-9]+", rivi)
