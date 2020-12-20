@@ -31,7 +31,7 @@ for i in sotku_valit:
     for j in i:
         kaikki_valit.append(j)
 
-print(kaikki_valit)
+# print(kaikki_valit)
 
 kelvottomat_luvut = []
 kelvottomat_liput = []
@@ -48,13 +48,7 @@ for lippu in muut_liput:
     else:
         kelvolliset_liput.append(lippu)
 
-print("Kelvottomat luvut:")
-print(kelvottomat_luvut)
-print("Kelvottomat liput:")
-print(kelvottomat_liput)
-print(f"Vastaus on {sum(kelvottomat_luvut)}")
-print("Kelvolliset liput:")
-print(kelvolliset_liput)
+print(avaimet)
 
 
 

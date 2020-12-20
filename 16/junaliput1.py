@@ -4,7 +4,7 @@ with open("lyhyt.txt") as f:
     data = f.read()
 
 saannot = data.split("\n\n")[0]
-avaimet = {}
+valit = {}
 for rivi in saannot.split("\n"):
     avain = re.search("^[a-z]+", rivi).group()
     avaimen_valit = []
@@ -14,7 +14,7 @@ for rivi in saannot.split("\n"):
         ala = int(vali.split("-")[0])
         yla = int(vali.split("-")[1])
         avaimen_valit.append(range(ala, yla + 1))
-    avaimet[avain] = avaimen_valit
+    valit[avain] = avaimen_valit
 
 oma_lippu_rivi = data.split("\n\n")[1].replace("your ticket:\n", "")
 oma_lippu = [int(x) for x in oma_lippu_rivi.split(",")]
@@ -24,7 +24,7 @@ moykky_muut_liput = data.split("\n\n")[2].replace("nearby tickets:\n", "").strip
 for lippu in moykky_muut_liput.split("\n"):
     muut_liput.append([int(x) for x in lippu.split(",")])
 
-sotku_valit = [ehto for ehto in (ehdot for ehdot in avaimet.values())]
+sotku_valit = [ehto for ehto in (ehdot for ehdot in valit.values())]
 
 kaikki_valit = []
 for i in sotku_valit:
